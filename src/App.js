@@ -1,16 +1,14 @@
 import './App.css';
-import UseStateEx1 from './functionalcomponents/hooks/useState/useSateEx1';
-import UseStateEx2 from './functionalcomponents/hooks/useState/useStateEx2';
-import UseStateEx3 from './functionalcomponents/hooks/useState/useStateEx3';
-
+import SigupDetails from './functionalcomponents/hooks/forms/Signup.form';
+import UncontrolledEx from './functionalcomponents/hooks/forms/UncontrolledEx';
+import FruitList from './functionalcomponents/hooks/forms/fruitsform';
 
 function App() {
   return (
     <div className='App'>
-     <UseStateEx1/>
-     <UseStateEx2/>
-     <UseStateEx3/>
-   
+      <UncontrolledEx/>
+      <FruitList/>
+      <SigupDetails/>
     </div>
   );
 }
