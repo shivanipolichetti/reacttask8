@@ -1,14 +1,13 @@
 import './App.css';
-import SigupDetails from './functionalcomponents/hooks/forms/Signup.form';
-import UncontrolledEx from './functionalcomponents/hooks/forms/UncontrolledEx';
-import FruitList from './functionalcomponents/hooks/forms/fruitsform';
+import ControlledEx2 from './functionalcomponents/hooks/forms/ControlledComponents/controlledEx2';
+import ControlledEx1 from './functionalcomponents/hooks/forms/ControlledComponents/controlledex1';
+
 
 function App() {
   return (
     <div className='App'>
-      <UncontrolledEx/>
-      <FruitList/>
-      <SigupDetails/>
+      {/*<ControlledEx1/>*/}
+      <ControlledEx2/>
     </div>
   );
 }

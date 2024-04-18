@@ -1,0 +1,40 @@
+.cardcon {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.cardcon form input[type="text"],
+.cardcon form input[type="password"],
+.cardcon form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cardcon form button {
+    background-color:gray; 
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card form button:hover {
+    background-color:gray; 
+}
+
+
+.card form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.card form .error-msg {
+    color: red;
+}
