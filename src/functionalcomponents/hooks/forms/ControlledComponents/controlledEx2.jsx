@@ -26,34 +26,34 @@ const ControlledEx2=()=>{
         switch(name){
             case "username":
                 if(value.length<7){
-                    setformErr({...formsErr,usernameErr:"enter username less than 7 characters"})
+                    setformErr(prevState=>({...prevState,username:"enter the username more than 7 characters"}))
                 }
                 else{
-                    setForms({...formsErr,usernameErr:null})
+                    setForms(prevState=>({...prevState,username:null}))
                 }
                 break;
                 case "email":
                     if(value.length<17){
-                        setformErr({...formsErr,emailErr:"enter username less than 7 characters"})
+                        setformErr(prevState=>({...prevState,email:"enter the password that includes letters,number and special symbols"}))
                     }
                     else{
-                        setForms({...formsErr,emailErr:null})
+                        setForms(prevState=>({...prevState,email:null}))
                     }
                     break;
                     case "password":
                         if(value.length<7){
-                            setformErr({...formsErr,passwordErr:"enter username less than 7 characters"})
+                            setformErr(prevState=>({...prevState,passwordErr:"enter username less than 7 characters"}))
                         }
                         else{
-                            setForms({...formsErr,passwordErr:null})
+                            setForms(prevState=>({...prevState,password:null}))
                         }
                         break;
                         case "confirmpassword":
                             if(value.length<7){
-                                setformErr({...formsErr,confirmpasswordErr:"enter username less than 7 characters"})
+                                setformErr(prevState({...prevState,confirmpasswordErr:"enter username less than 7 characters"}))
                             }
                             else{
-                                setForms({...formsErr,confirmpasswordErr:null})
+                                setForms(prevState=>({...prevState,confirmpassword:null}))
                             }
                             break;
                 default:
@@ -64,6 +64,9 @@ const ControlledEx2=()=>{
     }
     const  submitHandler=(event)=>{
         event.preventDefault()
+        if(!forms.username||!forms.email||!forms.password||!forms.confirmpassword){
+            alert("fill all the credentials")
+        }
 
     }
 return(
