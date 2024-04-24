@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
+
 const LoginForm = () => {
     const [data, setData] = useState(null);
     const [login, setLogin] = useState(false);
@@ -68,6 +69,7 @@ const LoginForm = () => {
                     onChange={changerHandler}
                 />
                 {formsErr.username && <span style={{ color: "red" }}>Invalid Username</span>}
+                <br></br>
                 <label>Password</label>
                 <input
                     type="password"
@@ -76,6 +78,7 @@ const LoginForm = () => {
                     onChange={changerHandler}
                 />
                 {formsErr.password && <span style={{ color: "red" }}>Invalid Password</span>}
+                <br></br>
                 <button type="submit">Submit</button>
                 {login ? (
                     <h3 style={{color:"red"}}>Welcome {data && data.username}</h3>

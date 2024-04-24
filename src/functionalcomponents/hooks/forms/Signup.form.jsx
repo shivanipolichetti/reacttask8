@@ -31,7 +31,7 @@ const SigupDetails=()=>{
         }
     }
     return(
-        <div>
+        <div>  
          <h1>Registration Form</h1>
          <form onSubmit={registerButton}>
             <input type="text" placeholder="name" ref={usernameRef}></input>

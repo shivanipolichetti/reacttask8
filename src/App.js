@@ -1,13 +1,10 @@
-import './App.css';
-import UseEffectEx1 from './functionalcomponents/hooks/hooks/useEffect/useEffect';
-import WeatherCheck from './functionalcomponents/hooks/hooks/useEffect/weather';
+import NavigationStack from "./navigation/navigation-stack";
 
 function App() {
 
   return (
     <div className='App'>
-    {/* <UseEffectEx1/>*/}
-     <WeatherCheck/>
+    <NavigationStack/>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 
-
 const RegisterForm=()=>{
     const usernameRef=useRef("")
     const passwordRef=useRef("")
@@ -24,7 +23,7 @@ const RegisterForm=()=>{
         }
     }
     return(
-
+ 
         <div>
            <form onSubmit={changeHandler}> 
             <h1>Login Form</h1>
@@ -36,6 +35,7 @@ const RegisterForm=()=>{
             <input type="submit"></input>
            </form>
            <div>
+            <br></br>
             <table border="2">
                 <thead>
                     <tr>
