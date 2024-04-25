@@ -2,10 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import Header, { ChangeContext } from "../component/header";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import UseEffectExample from "../functionalcomponents/hooks/hooks/useEffect/useEffectEx";
+import { DataShare } from "../navigation/navigation-stack";
 
 const HomeScreen = () => {
     const [product, setProduct] = useState([]);
-    
     useEffect(() => {
         fetchProduct();
     }, []);
@@ -26,7 +27,7 @@ const HomeScreen = () => {
         <>
             <Header/>
             <h1>Welcome to HomeScreen</h1>
-            <button>Click to change color of context</button>
+            <UseEffectExample/>
             {
                 product.length > 0 ? (
                     <>
@@ -45,6 +46,7 @@ const HomeScreen = () => {
                                             Click to See Product
                                         </Link>
                                     </button>
+                                    <button>Add to cart</button>
                                 </div>
                             );
                         })}
