@@ -32,18 +32,17 @@ const NavigationStack = () => {
         <DataShare.Provider value={{ data, changeData, changeLogin }}>
             <BrowserRouter>
                 <Routes>
-                    {login ? (
+                    {
+                    !login ? (
                         <>
-                            <Route path="/" element={<HomeScreen />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/contacts" element={<ContactScreen />} />
-                            <Route path="/setting" element={<Settings />} />
-                            <Route path="/:brand/:productId" element={<ProductDetails />} />
-                            <Route path="*" element={<InvalidScreen />} />
-                            <Route path="/register" element={<RegisterScreen />} />
+                         <Route path="/" Component={HomeScreen}/>  
+                         <Route path="/about" Component={About}/>  
+                         <Route path="/contacts" Component={ContactScreen}/>  
+                         <Route path="setting" Component={Settings}/>  
+                         <Route path="/register" Component={RegisterScreen}/>
                         </>
                     ) : (
-                        <Route path="/" element={<LoginScreen />} />
+                        <Route path="/" Component={LoginScreen}/>  
                     )}
                 </Routes>
             </BrowserRouter>

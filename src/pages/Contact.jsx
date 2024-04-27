@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import Header from "../component/header"
-import { DataShare } from "../navigation/navigation-stack";
-import UseReducerExample from "../functionalcomponents/hooks/hooks/useEffect/useReducer/useReducer";
+import UseMemo from "../functionalcomponents/hooks/hooks/useEffect/useMemo/useMemo";
+import Parent from "../functionalcomponents/hooks/hooks/useEffect/useCallback/parent";
+
+
 
 const ContactScreen=()=>{
-    const {data,changeData}=useContext(DataShare)
+  
     return(
         <>
         <Header/>
-        <h1>Welcome to ContactScreen {data.name}</h1>
-        <button onClick={changeData}>Click to change name</button>
-        <UseReducerExample/>
+       {/* <UseMemo/>*/}
+       <Parent/>
+      
         </>
     )
 }
